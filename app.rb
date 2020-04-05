@@ -38,12 +38,29 @@ class App < Sinatra::Base
    @subtract = "#{@number1 - @number2}"
    @multiply = "#{@number1 * @number2}"
    @divide = "#{@number1 / @number2}"
-     @result = "#{@add}"
+   if @operation == "add"
+     @add = "#{@number1 + @number2}"
+   elsif @operation == 'subtract'
+     @subtract = "#{@number1 - @number2}"
+   elsif @operation == 'multiply'
+     @multiply = "#{@number1 * @number2}"
+   elsif @operation == 'divide'
+     @divide = "#{@number1 / @number2}"
+    #  @result = "#{@add}"
     end
+  end
     #  || "#{@subtract}" || "#{@multiply}" || "#{@divide}"
 
 
 end
+
+# 
+# array = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+# 
+# def display_rainbow(array)
+#   puts array[0]
+#   puts array[1]
+# end
 
 # if @operation == "add"
 #   @add = "#{@number1 + @number2}"
